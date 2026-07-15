@@ -4,6 +4,8 @@
 
 Extension Chrome (Manifest V3) pour télécharger n'importe quelle image d'une page web en un clic — dans sa meilleure résolution, rangée où vous voulez.
 
+![Image Picker](docs/hero.png)
+
 ## Fonctionnalités
 
 - **Touche à maintenir** : maintenez la touche de votre choix (Alt par défaut), le mode sélection s'active ; relâchez, tout redevient normal. Un interrupteur dans le popup permet aussi une activation permanente (badge « ON » sur l'icône).
@@ -13,6 +15,12 @@ Extension Chrome (Manifest V3) pour télécharger n'importe quelle image d'une p
 - **Au-delà des `<img>`** (options) : images de fond CSS (`background-image`), SVG inline (sérialisés en `.svg`), canvas (exportés en `.png`).
 - **Rangement sur mesure** : sous-dossier dédié dans Téléchargements et modèle de nom de fichier avec jetons `{name}`, `{domain}`, `{date}`, `{time}`.
 - **Zéro collecte** : aucune donnée ne quitte votre machine. Deux permissions : `downloads` et `storage`.
+
+![Mode sélection](docs/action.png)
+
+| | |
+|---|---|
+| ![Réglages](docs/reglages.png) | ![Meilleure résolution](docs/resolution.png) |
 
 ## Installation
 
