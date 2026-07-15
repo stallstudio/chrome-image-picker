@@ -1,0 +1,5 @@
+.DS_Store
+dist/
+store/
+node_modules/
+test/tmp/

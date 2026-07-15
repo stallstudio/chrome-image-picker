@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="utf-8"><title>Page de test Image Picker</title></head>
+<body style="margin:0">
+  <!-- Image dans un lien : le clic en mode sélection ne doit PAS naviguer -->
+  <a href="/other.html" style="position:absolute;left:0;top:0">
+    <img id="i1" src="/small.png" srcset="/small.png 100w, /big.png 400w"
+         width="100" height="50" style="display:block" alt="test">
+  </a>
+  <!-- Élément avec fond CSS : détecté seulement si l'option est activée -->
+  <div id="bg" style="position:absolute;left:0;top:100px;width:120px;height:80px;background-image:url('/bg.png')"></div>
+  <!-- SVG inline et canvas : détectés seulement si l'option "extras" est activée -->
+  <svg id="vec" width="120" height="90" style="position:absolute;left:300px;top:20px">
+    <rect width="120" height="90" fill="#ddeeff"/>
+    <circle cx="60" cy="45" r="30" fill="#336699"/>
+  </svg>
+  <canvas id="cv" width="100" height="80" style="position:absolute;left:300px;top:150px"></canvas>
+  <script>
+    const ctx = document.getElementById("cv").getContext("2d");
+    ctx.fillStyle = "#cc3333";
+    ctx.fillRect(0, 0, 100, 80);
+  </script>
+</body>
+</html>

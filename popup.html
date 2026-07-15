@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Image Picker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Image Picker</h1>
+
+  <label class="row">
+    <span>Activer le mode sélection</span>
+    <input type="checkbox" id="enabled" class="switch">
+  </label>
+
+  <div class="row">
+    <span>Touche d'activation<br><small>maintenir dans la page</small></span>
+    <button id="key-capture" title="Cliquez puis appuyez sur une touche. Échap pour annuler.">…</button>
+  </div>
+
+  <label class="row">
+    <span>Détecter les fonds CSS<br><small>background-image</small></span>
+    <input type="checkbox" id="detect-backgrounds" class="switch">
+  </label>
+
+  <label class="row">
+    <span>Détecter SVG et canvas<br><small>dessins vectoriels et canvas</small></span>
+    <input type="checkbox" id="detect-extras" class="switch">
+  </label>
+
+  <div class="field">
+    <label for="subfolder">Sous-dossier de téléchargement</label>
+    <input type="text" id="subfolder" placeholder="(racine de Téléchargements)" spellcheck="false">
+  </div>
+
+  <div class="field">
+    <label for="filename-template">Modèle de nom de fichier</label>
+    <input type="text" id="filename-template" placeholder="{name}" spellcheck="false">
+    <small>Jetons : {name}, {domain}, {date}, {time} — l'extension de fichier est ajoutée automatiquement.</small>
+  </div>
+
+  <p class="hint">Astuce : maintenez la touche enfoncée dans une page pour activer le mode temporairement.</p>
+
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Curseur en mode sélection */
+html.cip-active,
+html.cip-active * {
+  cursor: crosshair !important;
+}
+
+/* Cadre de surbrillance de l'image survolée */
+#cip-overlay {
+  position: fixed !important;
+  display: none;
+  pointer-events: none !important;
+  z-index: 2147483647 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  border: 2px solid #1a7f37 !important;
+  border-radius: 2px;
+  background: rgba(26, 127, 55, 0.15) !important;
+  transition: none !important;
+}
+
+#cip-overlay.cip-overlay-flash {
+  background: rgba(26, 127, 55, 0.45) !important;
+}
+
+/* Étiquette dimensions naturelles (coin supérieur gauche du cadre) */
+#cip-overlay-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: #1a7f37;
+  color: #fff;
+  font: 11px/1.5 -apple-system, system-ui, sans-serif;
+  padding: 1px 6px;
+  border-radius: 0 0 4px 0;
+  white-space: nowrap;
+}
+
+/* Toast de confirmation / erreur */
+#cip-toast {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 24px !important;
+  transform: translate(-50%, 8px);
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+  background: #222;
+  color: #fff;
+  font: 13px/1.5 -apple-system, system-ui, sans-serif;
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+#cip-toast.cip-toast-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+#cip-toast.cip-toast-error {
+  background: #b3261e;
+}
