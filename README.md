@@ -18,9 +18,10 @@ Extension Chrome (Manifest V3) pour télécharger n'importe quelle image d'une p
 
 ![Mode sélection](docs/action.png)
 
-| | |
-|---|---|
-| ![Réglages](docs/reglages.png) | ![Meilleure résolution](docs/resolution.png) |
+<p>
+  <img src="docs/reglages.png" alt="Réglages" width="49.4%">
+  <img src="docs/resolution.png" alt="Meilleure résolution" width="49.4%">
+</p>
 
 ## Installation
 
